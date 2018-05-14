@@ -61,7 +61,7 @@ sudo apt -y install mpv audacity vokoscreen
 sudo apt -y install filezilla xul-ext-ublock-origin
 sudo apt -y install htop tmux tree w3m ntpdate bmon curl
 sudo apt -y install xubuntu-restricted-extras
-curl "http://1.1.1.3/ac_portal/login.php" -d "opr=pwdLogin&userName=asesor01&pwd=asesor1p8"
+curl "http://1.1.1.3/ac_portal/login.php" -d "opr=pwdLogin&userName=asesor01&pwd=***"
 sudo /usr/lib/update-notifier/package-data-downloader
 sudo apt -y purge gigolo mousepad parole network-manager gnome-sudoku gnome-mines appstream
 ## Programming
