@@ -75,7 +75,7 @@ sudo apt -y install r-recommended scilab octave weka
 ## Library
 sudo apt -y install freeglut3-dev libglew-dev libglfw3-dev
 sudo apt -y install libopencv-dev opencv-doc python-opencv
-sudo apt -y install mpi-default-* openmpi-doc
+sudo apt -y install mpi-default-bin mpi-default-dev openmpi-doc
 ## Web and database
 sudo apt -y install postgresql postgis pgadmin3 pgcli sqlite3
 sudo apt -y install apache2 php libapache2-mod-php php-pgsql php-sqlite3
@@ -88,7 +88,7 @@ sudo apt -y install logisim iverilog gtkwave fritzing
 ## Network
 sudo apt -y install nmap traceroute whois wireshark
 ## Bioinformatics
-sudo apt -y install ugene clustal* velvet* soapdenovo* bowtie* samtools plink
+sudo apt -y install ugene clustalw clustalx velvet velvet-example velvet-long velvetoptimiser velvet-tests soapdenovo soapdenovo2 bowtie bowtie2 bowtie2-examples bowtie-examples samtools plink
 ## Programming misc
 sudo apt -y install golang rustc haskell-platform
 

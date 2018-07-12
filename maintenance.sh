@@ -4,6 +4,7 @@ sudo rm -r /var/lib/apt/lists/*
 sudo apt update
 sudo apt upgrade
 sudo apt autoremove --purge
+
 ## Clean and restore student's home
 su - student
 rm -rf * .*
