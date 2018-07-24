@@ -73,6 +73,72 @@ salt '*' cmd.run "sudo apt update"
 salt '*' system.reboot
 salt '*' system.poweroff
 
+#melihat_module_function
+salt'*' sys.list_functions
+
+#cek_key_finger_print_master_minion
+salt-key -p
+salt-key -f idminion #onmaster or
+salt-key -F #onallminion
+salt-call --local key.finger #onminionlocal
+
+#clusterssh
+cssh -l adminlab 172.18.12.15 172.18.12.71 172.18.12.72 172.18.12.73 172.18.12.74 172.18.12.75
+
+#15:02:44: Error: Unable to initialize GTK+, is DISPLAY set properly?
+ssh -X adminlab@172.18.12.15
+
+#kelebihan_Saltstack
+#Parallel execution
+#The core functions of Salt:
+#enable commands to remote systems to be called in parallel rather than serially (sistem remote yg paralel)
+#use a secure and encrypted protocol(protokol yg terenscript)
+#use the smallest and fastest network payloads possible (membutuhkan jaringan yang kecil)
+#provide a simple programming interface(simple programing)
+
+#https://docs.saltstack.com/en/2015.8/ref/modules/all/salt.modules.shadow.html#salt.modules.shadow.info
+#md5
+#blowfish (not in mainline glibc, only available in distros that add it)
+#sha256
+#sha512 (default)
+salt '*' shadow.gen_password 'student'
+salt '*' shadow.gen_password 'student' algorithm=sha512
+
+#script_salt_master
+https://docs.saltstack.com/en/latest/ref/configuration/examples.html#example-master-configuration-file
+#script_salt_minion
+
+#count_jumlahbaris
+wc -l yourtextfile
+#countbyte
+wc -c
+
+#socket_grep
+netstat -l
+netstat -lt
+ps aux | grep salt-master
+ps aux | grep salt-minion
+
+#killPID
+kill PID
+
+#[WARNING ] Unable to bind socket 127.0.0.1:4505, error: [Errno 98] Address already in use; Is there another salt-master running?
+
+#vmsrunning_on terminal
+VBoxManage list vms
+VBoxManage startvm "name_vm" --type headless
+VBoxManage controlvm "Ubuntu Server" pause --type headless
+VBoxManage controlvm "Ubuntu Server" poweroff --type headless
+
+#layarOSI
+#ly-7-applications(http,ftp,smtp)
+#ly-6-presentation(jpeg,gif,mpeg)
+#ly-5-session(winsock)
+#ly-4-transport(tcp,udp,spx)
+#ly-3-network(ip,icmp,ipx)
+#ly-2-datalink(ethernet,atm, switch)
+#ly-1-physical(ethernet,token, ring)
+
 ##script_saltstack
 saltstack_user:
   user.present:
