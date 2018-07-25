@@ -126,6 +126,7 @@ kill PID
 
 #vmsrunning_on terminal
 VBoxManage list vms
+VBoxManage list runningvms
 VBoxManage startvm "name_vm" --type headless
 VBoxManage controlvm "Ubuntu Server" pause --type headless
 VBoxManage controlvm "Ubuntu Server" poweroff --type headless
